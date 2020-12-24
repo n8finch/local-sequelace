@@ -1,7 +1,7 @@
 {
   "name": "local-sequelace",
   "productName": "SequelAce",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "author": "Nate Finch",
   "keywords": [
     "local-addon",

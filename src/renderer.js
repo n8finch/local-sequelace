@@ -5,6 +5,6 @@ module.exports = function (context) {
 	const { hooks } = context;
 
 	hooks.addContent('SiteInfoDatabase_TableList_TableListRow[Connect]:Before', (site) => (
-		<SequelAce key="tableplus" site={site} context={context} />
+		<SequelAce key="sequelace" site={site} context={context} />
 	));
 };
