@@ -8,7 +8,7 @@
     "sequelace",
     "database"
   ],
-  "bgColor": "#fff39b",
+  "bgColor": "#ff9b9b",
   "icon": "icon.png",
   "slug": "local-sequelace",
   "description": "Connect to Local databases using SequelAce.",

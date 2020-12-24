@@ -173,7 +173,7 @@ export default class TablePlus extends React.Component {
 	 * @return {string} Test response.
 	 */
 	getButtonLabel () {
-		return 'Open TablePlus';
+		return 'Open Sequel Ace';
 	}
 
 	/**
@@ -257,7 +257,7 @@ export default class TablePlus extends React.Component {
 	}
 
 	/**
-	 * Render our [Open TablePlus] Button.
+	 * Render our [Open Sequel Plus] Button.
 	 *
 	 * @author Aubrey Portwood <aubrey@webdevstudios.com>
 	 * @since 1.0.0
