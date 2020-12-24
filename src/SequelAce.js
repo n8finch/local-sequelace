@@ -14,14 +14,14 @@ const fs = require('fs');
  *
  * @see	rendereer.js Where this is loaded.
  */
-export default class TablePlus extends React.Component {
+export default class SequelAce extends React.Component {
 
 	/**
 	 * Constructor.
 	 *
 	 * @author Aubrey Portwood <aubrey@webdevstudios.com>
 	 * @since 1.0.0
-	 * @param  {Object} props The properties from the <TablePlus> component from renderer.js.
+	 * @param  {Object} props The properties from the <SequelAce> component from renderer.js.
 	 */
 	constructor (props) {
 		super(props);
@@ -122,7 +122,7 @@ export default class TablePlus extends React.Component {
 	 * @since  1.0.0
 	 * @return {string} mysql:// URI.
 	 */
-	getTablePlusURI () {
+	getSequelAceURI () {
 		return `mysql://${this.props.site.mysql.user}:${this.props.site.mysql.password}@localhost/${this.props.site.mysql.database}?enviroment=local&name=${this.props.site.name}&safeModeLevel=0&advancedSafeModeLevel=0`;
 	}
 
@@ -135,7 +135,7 @@ export default class TablePlus extends React.Component {
 	 * @return {void}
 	 */
 	openURI () {
-		exec(`open "${this.getTablePlusURI()}"`, () => this.doNothing());
+		exec(`open "${this.getSequelAceURI()}"`, () => this.doNothing());
 	}
 
 	/**
@@ -151,16 +151,16 @@ export default class TablePlus extends React.Component {
 	}
 
 	/**
-	 * Open TablePlus when you click the button.
+	 * Open SequelAce when you click the button.
 	 *
-	 * We use the `open` and a `mysql://` URI format to tell TablePlus to open our
+	 * We use the `open` and a `mysql://` URI format to tell SequelAce to open our
 	 * connection.
 	 *
 	 * @author Aubrey Portwood <aubrey@webdevstudios.com>
 	 * @since 1.0.0
 	 * @return {void}
 	 */
-	openTablePlus () {
+	openSequelAce () {
 		this.symlinkSockFile();
 		this.openURI();
 	}
@@ -177,7 +177,7 @@ export default class TablePlus extends React.Component {
 	}
 
 	/**
-	 * Only allow connections on MacOS TablePlus.
+	 * Only allow connections on MacOS SequelAce.
 	 *
 	 * @author Aubrey Portwood <aubrey@webdevstudios.com>
 	 * @since 1.0.0
@@ -188,15 +188,16 @@ export default class TablePlus extends React.Component {
 	}
 
 	/**
-	 * Detect TablePlus
+	 * Detect SequelAce
 	 *
-	 * Assumes, like normal, you have it in /Applications/TablePlus.app.
+	 * Assumes, like normal, you have it in /Applications/SequelAce.app.
 	 *
 	 * @author Aubrey Portwood <aubrey@webdevstudios.com>
 	 * @since 1.0.0
 	 * @return {boolean} Test response.
 	 */
-	hasTablePlus () {
+	hasSequelAce () {
+		// TODO
 		return fs.existsSync('/Applications/TablePlus.app');
 	}
 
@@ -227,7 +228,7 @@ export default class TablePlus extends React.Component {
 	 */
 	stateButtonStyles () {
 		return this.canConnect()
-			? { ...this.defaultButtonStyles(), ...{	'color': '#ffa600' } }
+			? { ...this.defaultButtonStyles(), ...{	'color': '#ff9b9b' } }
 			: this.defaultButtonStyles();
 	}
 
@@ -253,7 +254,7 @@ export default class TablePlus extends React.Component {
 	 * @return {boolean} Test response.
 	 */
 	canConnect () {
-		return this.isMacOS() && this.hasTablePlus() && this.siteOn();
+		return this.isMacOS() && this.hasSequelAce() && this.siteOn();
 	}
 
 	/**
@@ -269,7 +270,7 @@ export default class TablePlus extends React.Component {
 			<TextButton
 				disabled={this.state.disabled}
 				style={this.state.style}
-				onClick={() => this.openTablePlus()}>{this.getButtonLabel()}</TextButton>
+				onClick={() => this.openSequelAce()}>{this.getButtonLabel()}</TextButton>
 		);
 	}
 }
