@@ -3,7 +3,7 @@
 function link {
 	local pwd=$(pwd)
 	local addondir="$HOME/Library/Application Support/Local/addons"
-	local addonpath="$addondir/local-tableplus"
+	local addonpath="$addondir/local-sequelace"
 
 	if [ ! -d "$addondir" ]; then
 		echo "⚠️  Cannot locate $addondir, is Local installed?"
@@ -23,7 +23,7 @@ function link {
 	npm install --prefix "$addonpath"
 	npm run build --prefix "$addonpath"
 
-	echo "✅  Done, local-tableplus added to $addonpath"
+	echo "✅  Done, local-sequelace added to $addonpath"
 }
 
 link

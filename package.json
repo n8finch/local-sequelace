@@ -1,17 +1,17 @@
 {
-  "name": "local-tableplus",
-  "productName": "TablePlus",
+  "name": "local-sequelace",
+  "productName": "SequelAce",
   "version": "1.0.1",
   "author": "Aubrey Portwood",
   "keywords": [
     "local-addon",
-    "tableplus",
+    "sequelace",
     "database"
   ],
   "bgColor": "#fff39b",
   "icon": "icon.png",
-  "slug": "local-tableplus",
-  "description": "Connect to Local databases using TablePlus.",
+  "slug": "local-sequelace",
+  "description": "Connect to Local databases using SequelAce.",
   "renderer": "lib/renderer.js",
   "main": "lib/main.js",
   "repository": {
